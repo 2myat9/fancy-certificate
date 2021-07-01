@@ -1,38 +1,69 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@100;300&display=swap");
+.tilt-root {
+  border-radius: 15px;
+  height: 700px;
+  background-color: red;
+  width: 650px;
+  background-image: -webkit-linear-gradient(315deg, #ff00ba 0%, #fae713 100%);
+  background-image: linear-gradient(135deg, #ff00ba 0%, #fae713 100%);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+}
+.tilt-child {
+  border-radius: 15px;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translateZ(30px) translateX(-50%) translateY(-50%);
+  box-shadow: 0 0 50px 0 rgba(51, 51, 51, 0.3);
+  background-color: white;
+}
+.totally-centered {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cover-img {
+  max-height: 200px;
+  max-width: 350px;
+  height: auto;
+  width: auto;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 3px 3px 22px gray;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  font-family: "Fraunces", serif;
 }
